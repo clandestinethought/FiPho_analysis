@@ -10,7 +10,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 
 print('Please input path to settings file: ')
 output_file_path = input()
-settings_path = (f'{output_file_path}/settings.xlsx')
+settings_path = os.path.join(output_file_path,'settings.xlsx')
 settings = pd.read_excel(settings_path)
 
 #loop through settings file to extract directories for treatment and subjects.
